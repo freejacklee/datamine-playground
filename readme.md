@@ -1,8 +1,14 @@
-# mark's net playground
+# Datamine Playground
 
 ## introduction
 
-here are my private projects relative to web-crawl/reverse individually but sharing the some environment.
+Here are my private projects relative to web-crawl/reverse individually but sharing the some environment.
+
+May you have fun.
+
+## project list
+
+- `project_deepl`: an api of calling deepl translation, based on javascript reverse analysis
 
 ## installation (fully based on python 3+, 3.9 is better)
 
