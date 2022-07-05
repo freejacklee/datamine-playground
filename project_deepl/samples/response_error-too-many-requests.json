@@ -1,0 +1,7 @@
+{
+  "jsonrpc": "2.0",
+  "error": {
+    "code": 1042911,
+    "message": "Too many requests"
+  }
+}
