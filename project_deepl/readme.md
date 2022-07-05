@@ -7,6 +7,7 @@
 ## project guide
 
 ```shell
+cd src
 python main.py "Stay foolish, stay hungry"
 # 你还好吗？
 ```

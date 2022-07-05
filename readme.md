@@ -33,6 +33,6 @@ I make all the scripts based on `argparse`, so that you can use `python xxx.py -
 take the `project_deepl` as an example:
 
 ```shell
-cd project_deepl
+cd project_deepl/src
 python main.py -h
 ```
