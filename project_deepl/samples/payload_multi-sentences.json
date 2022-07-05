@@ -1,0 +1,131 @@
+{
+  "jsonrpc": "2.0",
+  "method": "LMT_handle_jobs",
+  "params": {
+    "jobs": [
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update.",
+            "id": 0,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [],
+        "raw_en_context_after": [
+          "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15."
+        ],
+        "preferred_num_beams": 1
+      },
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15.",
+            "id": 1,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [
+          "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update."
+        ],
+        "raw_en_context_after": [
+          "The patches are used by the prediction and update step to obtain the innovation term, i.payload_dumped., the calculation of the error between the frame and the projection of the multi-level patch into the frame."
+        ],
+        "preferred_num_beams": 1
+      },
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "The patches are used by the prediction and update step to obtain the innovation term, i.payload_dumped., the calculation of the error between the frame and the projection of the multi-level patch into the frame.",
+            "id": 2,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [
+          "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update.",
+          "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15."
+        ],
+        "raw_en_context_after": [
+          "The ROVIO algorithm achieves good accuracy and robustness under a low resource utilization [18,65], being suitable for embedded implementations [65]."
+        ],
+        "preferred_num_beams": 1
+      },
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "The ROVIO algorithm achieves good accuracy and robustness under a low resource utilization [18,65], being suitable for embedded implementations [65].",
+            "id": 3,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [
+          "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update.",
+          "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15.",
+          "The patches are used by the prediction and update step to obtain the innovation term, i.payload_dumped., the calculation of the error between the frame and the projection of the multi-level patch into the frame."
+        ],
+        "raw_en_context_after": [
+          "However, the algorithm proved to be more sensitive to per-frame processing time [65] and less accurate than other algorithms, such as VI-DSO [70]."
+        ],
+        "preferred_num_beams": 1
+      },
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "However, the algorithm proved to be more sensitive to per-frame processing time [65] and less accurate than other algorithms, such as VI-DSO [70].",
+            "id": 4,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [
+          "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update.",
+          "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15.",
+          "The patches are used by the prediction and update step to obtain the innovation term, i.payload_dumped., the calculation of the error between the frame and the projection of the multi-level patch into the frame.",
+          "The ROVIO algorithm achieves good accuracy and robustness under a low resource utilization [18,65], being suitable for embedded implementations [65]."
+        ],
+        "raw_en_context_after": [
+          "o"
+        ],
+        "preferred_num_beams": 1
+      },
+      {
+        "kind": "default",
+        "sentences": [
+          {
+            "text": "o",
+            "id": 5,
+            "prefix": ""
+          }
+        ],
+        "raw_en_context_before": [
+          "The Robust Visual Inertial Odometry (ROVIO) algorithm [69] is another ﬁlter-based method that uses the EKF approach, and similar to other ﬁlter-based methods, it uses the IMU data to state propagation, and the camera data to ﬁlter update.",
+          "However, besides per- forming the feature extraction, ROVIO executes the extraction of multi-level patches around the features, as illustrated by Figure 15.",
+          "The patches are used by the prediction and update step to obtain the innovation term, i.payload_dumped., the calculation of the error between the frame and the projection of the multi-level patch into the frame.",
+          "The ROVIO algorithm achieves good accuracy and robustness under a low resource utilization [18,65], being suitable for embedded implementations [65].",
+          "However, the algorithm proved to be more sensitive to per-frame processing time [65] and less accurate than other algorithms, such as VI-DSO [70]."
+        ],
+        "raw_en_context_after": [],
+        "preferred_num_beams": 1
+      }
+    ],
+    "lang": {
+      "preference": {
+        "weight": {},
+        "default": "default"
+      },
+      "source_lang_computed": "EN",
+      "target_lang": "ZH"
+    },
+    "priority": 1,
+    "commonJobParams": {
+      "browserType": 1,
+      "formality": null
+    },
+    "timestamp": 1657014549082
+  },
+  "id": 59710004
+}

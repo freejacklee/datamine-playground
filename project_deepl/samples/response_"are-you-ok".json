@@ -1,0 +1,61 @@
+{
+  "jsonrpc": "2.0",
+  "id": 60620006,
+  "result": {
+    "translations": [
+      {
+        "beams": [
+          {
+            "sentences": [
+              {
+                "text": "\u4F60\u8FD8\u597D\u5417\uFF1F",
+                "ids": [
+                  0
+                ]
+              }
+            ],
+            "num_symbols": 6
+          },
+          {
+            "sentences": [
+              {
+                "text": "\u4F60\u8FD8\u597D\u5417",
+                "ids": [
+                  0
+                ]
+              }
+            ],
+            "num_symbols": 5
+          },
+          {
+            "sentences": [
+              {
+                "text": "\u4F60\u8FD8\u597D\u5417?",
+                "ids": [
+                  0
+                ]
+              }
+            ],
+            "num_symbols": 6
+          },
+          {
+            "sentences": [
+              {
+                "text": "\u4F60\u6CA1\u4E8B\u5427\uFF1F",
+                "ids": [
+                  0
+                ]
+              }
+            ],
+            "num_symbols": 6
+          }
+        ],
+        "quality": "normal"
+      }
+    ],
+    "target_lang": "ZH",
+    "source_lang": "EN",
+    "source_lang_is_confident": false,
+    "detectedLanguages": {}
+  }
+}
