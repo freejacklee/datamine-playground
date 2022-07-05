@@ -100,6 +100,10 @@ if __name__ == '__main__':
     parser = args.parse_args()
 
     result = callTranslationViaDeepL(parser.to_translate)
+    if not result:
+        print("ABORT since there is no return!")
+        exit(-1)
+
     if parser.format == "json":
         output = result
     else:
