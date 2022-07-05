@@ -181,7 +181,7 @@ def callTranslationViaDeepL(to_translate: str, proxy: str = None) -> Optional[di
         sess.proxies = {"http": proxy, "https": proxy}
     res = sess.post(URL_DEEPL_TRANSLATE, data=payload_to_post).json()
     if "result" not in res:
-        print("failed to translate!")
+        print(f"failed to translate reason: [{res['error']['message']}]")
         err_fn = "error.log"
         err_fp = os.path.join(LOG_PATH, err_fn)
         with open(err_fp, "w") as f:

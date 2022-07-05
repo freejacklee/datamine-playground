@@ -1,5 +1,7 @@
 # deepl web api (unofficial)
 
+![img.png](assets/cover.png)
+
 ## global guide
 
 [readme](../readme.md)
