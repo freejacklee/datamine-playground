@@ -3,13 +3,12 @@ tks to: [DeepL Api 设计中的欺骗战术 - zu1k](https://zu1k.com/posts/think
 """
 
 import json
+import os
 import random
 import time
 from typing import Optional
 
 import requests
-
-timestamp = time.time()
 
 url = 'https://www2.deepl.com/jsonrpc?method=LMT_handle_jobs'
 
@@ -54,25 +53,44 @@ def callTranslationViaDeepL(to_translate: str) -> Optional[dict]:
         """
         return e.replace('hod":"', 'hod" : "' if (t + 3) % 13 == 0 or (t + 5) % 29 == 0 else 'hod": "')
 
+    timestamp = time.time()
+
     id = initId()
 
-    payload = {"jsonrpc": "2.0", "method": "LMT_handle_jobs", "params": {"jobs": [
-        {"kind": "default", "sentences": [{"text": to_translate, "id": 0, "prefix": ""}],
-         "raw_en_context_before": [], "raw_en_context_after": [], "preferred_num_beams": 4, "quality": "fast"}],
-        "lang": {
-            "preference": {
-                "weight": {"DE": 0.1818, "EN": 13.50072, "ES": 0.25707, "FR": 0.30468, "IT": 0.28796, "JA": 0.10335,
-                           "NL": 0.28976, "PL": 0.28227, "PT": 0.13819, "RU": 0.1102, "ZH": 0.22576, "BG": 0.07641,
-                           "CS": 0.43894, "DA": 0.13387, "EL": 0.07787, "ET": 0.16358, "FI": 0.31664, "HU": 0.09349,
-                           "LT": 0.08603, "LV": 0.06412, "RO": 0.12765, "SK": 0.11411, "SL": 0.10327, "SV": 0.24992,
-                           "TR": 0.95955, "ID": 0.15974}, "default": "default"}, "source_lang_user_selected": "EN",
-            "target_lang": "ZH"}, "priority": -1, "commonJobParams": {"browserType": 1, "formality": None},
-        "timestamp": int(timestamp * 1000)}, "id": id}
+    payload = {
+        "jsonrpc": "2.0",
+        "method": "LMT_handle_jobs",
+        "params": {
+            "jobs": [
+                {"kind": "default",
+                 "sentences": [{"text": to_translate, "id": 0, "prefix": ""}],
+                 "raw_en_context_before": [], "raw_en_context_after": [], "preferred_num_beams": 4, "quality": "fast"
+                 }],
+            "lang": {
+                "preference": {
+                    "weight": {"DE": 0.1818, "EN": 13.50072, "ES": 0.25707, "FR": 0.30468, "IT": 0.28796, "JA": 0.10335,
+                               "NL": 0.28976, "PL": 0.28227, "PT": 0.13819, "RU": 0.1102, "ZH": 0.22576, "BG": 0.07641,
+                               "CS": 0.43894, "DA": 0.13387, "EL": 0.07787, "ET": 0.16358, "FI": 0.31664, "HU": 0.09349,
+                               "LT": 0.08603, "LV": 0.06412, "RO": 0.12765, "SK": 0.11411, "SL": 0.10327, "SV": 0.24992,
+                               "TR": 0.95955, "ID": 0.15974}, "default": "default"},
+                "source_lang_user_selected": "EN",
+                "target_lang": "ZH"},
+            "priority": -1,
+            "commonJobParams": {"browserType": 1, "formality": None},
+            "timestamp": int(timestamp * 1000)}, "id": id}
 
     payload = handlePayload(json.dumps(payload), id)
 
-    res = requests.post(url, headers=headers, data=payload)
-    return res.json()
+    res = requests.post(url, headers=headers, data=payload).json()
+    if "result" not in res:
+        print("failed to translate!")
+        err_fn = "error.log"
+        err_fp = os.path.join(os.path.dirname(__file__), err_fn)
+        with open(err_fp, "w") as f:
+            json.dump(res, f, ensure_ascii=False, indent=2)
+            print(f"the log has been dumped into file://{err_fp}")
+        return
+    return res
 
 
 if __name__ == '__main__':
@@ -101,7 +119,7 @@ if __name__ == '__main__':
 
     result = callTranslationViaDeepL(parser.to_translate)
     if not result:
-        print("ABORT since there is no return!")
+        print("ABORT!")
         exit(-1)
 
     if parser.format == "json":
