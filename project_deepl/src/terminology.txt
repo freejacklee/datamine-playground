@@ -1,0 +1,4 @@
+monocular	单目
+stereo	双目
+local mapping	建图
+loop closing	回环检测

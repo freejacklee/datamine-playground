@@ -1,3 +1,4 @@
+import sys
 from typing import List
 
 from ds import JobItem
@@ -20,3 +21,7 @@ def gen_jobs(sentences: List[str]) -> List[JobItem]:
         }
         jobs.append(job_item)
     return jobs
+
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)

@@ -108,25 +108,25 @@ based on current time, and with a little shift using the count of `i` in text to
 
 ## funny time
 
-![img.png](./assets2/img.png)
+![img.png](./assets/img2.png)
 
-![img_1.png](./assets2/img_1.png)
+![img_1.png](./assets/img2_1.png)
 
-![img_2.png](./assets2/img_2.png)
+![img_2.png](./assets/img2_2.png)
 
-![img_3.png](./assets2/img_3.png)
+![img_3.png](./assets/img2_3.png)
 
-![img_4.png](./assets2/img_4.png)
+![img_4.png](./assets/img2_4.png)
 
-![img_5.png](./assets2/img_5.png)
+![img_5.png](./assets/img2_5.png)
 
-![img_6.png](./assets2/img_6.png)
+![img_6.png](./assets/img2_6.png)
 
-![img_7.png](./assets2/img_7.png)
+![img_7.png](./assets/img2_7.png)
 
-![img_8.png](./assets2/img_8.png)
+![img_8.png](./assets/img2_8.png)
 
-![img_9.png](./assets2/img_9.png)
+![img_9.png](./assets/img2_9.png)
 
-![img_10.png](./assets2/img_10.png)
+![img_10.png](./assets/img2_10.png)
 
